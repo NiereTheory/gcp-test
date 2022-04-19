@@ -6,7 +6,10 @@ jobs:
       - image: ubuntu:latest
     steps:
       - checkout
-      - run: bash runit.sh && echo $FIRST
+      - run: |
+          echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
+          gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
+          gsutil ls
 
 # Orchestrate our job run sequence
 workflows:
