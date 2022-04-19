@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   first_job:
     docker:
-      - image: ubuntu:latest
+      - image: google/cloud-sdk
     steps:
       - checkout
       - run: |
