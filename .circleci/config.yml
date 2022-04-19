@@ -13,5 +13,5 @@ workflows:
   main_workflow:
     jobs:
       - first_job:
-        context:
-          - gcp
+          context:
+            - gcp
