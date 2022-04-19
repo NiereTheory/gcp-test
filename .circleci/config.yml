@@ -12,4 +12,6 @@ jobs:
 workflows:
   main_workflow:
     jobs:
-      - first_job
+      - first_job:
+        context:
+          - gcp
