@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   first_job:
     docker:
-      - image: circleci/ubunu:3.9
+      - image: ubuntu:latest
     steps:
       - checkout
       - run: bash runit.sh && echo $FIRST
